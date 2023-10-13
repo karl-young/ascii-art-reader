@@ -46,7 +46,7 @@ async function main() {
 main()
 
 // Need to make the files accessable
-// need funcition that sees the choice slecetes the file with that name,
+// need funcition that sees the choice selects the file with that name,
 // console.logs the image from the file
 async function readsChoice(userChoice) {
   try {
