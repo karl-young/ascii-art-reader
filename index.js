@@ -2,13 +2,11 @@ import prompt from 'prompt'
 import { readdir, readFile } from 'node:fs/promises'
 
 // welcome message function
-
 export function getWelcomeMessage() {
   return 'Welcome'
 }
 
 // get the file names and return them
-
 export async function getFileNames() {
   const fileNames = await readdir('./data')
   const fileNamesWithoutTxt = fileNames.map((filename) => {
