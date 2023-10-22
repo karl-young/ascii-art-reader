@@ -8,14 +8,16 @@ export function getWelcomeMessage() {
 
 // get the file names and return them
 export async function getFileNames() {
-  const fileNames = await readdir('./data')
-  const fileNamesWithoutTxt = fileNames.map((filename) => {
-    return filename.slice(0, filename.length - 4)
+  const fileNames = await readdir(`./data`)
+  const fileNamesWithoutTxt = fileNames.map((fileName) => {
+    return fileName.slice(0, fileName.length - 4)
   })
+
   console.log(fileNamesWithoutTxt)
   return fileNamesWithoutTxt
 }
-
+// const fileNamesWithoutTxt = fileNames.map((filename) => {
+//   return filename.slice(0, filename.length - 4)
 // Get input function
 async function getInput() {
   prompt.message = ''
@@ -49,7 +51,7 @@ main()
 async function readsChoice(userChoice) {
   try {
     return readFile(`./data/${userChoice}.txt`, 'utf-8')
-  } catch (error) {
-    console.log(error)
+  } catch (e) {
+    console.e(e.message)
   }
 }
