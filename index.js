@@ -1,12 +1,12 @@
 import prompt from 'prompt'
 import { readdir, readFile } from 'node:fs/promises'
 
-// welcome message function
+// Welcome message function
 export function getWelcomeMessage() {
   return 'Welcome'
 }
 
-// get the file names and return them
+// Get the file names and return them
 export async function getFileNames() {
   const fileNames = await readdir(`./data`)
   const fileNamesWithoutTxt = fileNames.map((fileName) => {
@@ -16,8 +16,7 @@ export async function getFileNames() {
   console.log(fileNamesWithoutTxt)
   return fileNamesWithoutTxt
 }
-// const fileNamesWithoutTxt = fileNames.map((filename) => {
-//   return filename.slice(0, filename.length - 4)
+
 // Get input function
 async function getInput() {
   prompt.message = ''
@@ -31,7 +30,7 @@ async function getInput() {
   }
   return await prompt.get(choice)
 }
-// general things working and catching errors
+// General things working and catching errors
 async function main() {
   try {
     console.log(getWelcomeMessage())

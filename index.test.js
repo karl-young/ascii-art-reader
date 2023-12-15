@@ -35,12 +35,4 @@ describe('Display the different ASCII art', () => {
 
 // i need to test to see if i can accessTheFiles  function
 
-// describe("Accessing the file works", () => {
-//   test("", () => {
-//     // Arrange
-//     const expected =   ,
-//     //Act
-//     const result =
-//     //Assert
-//   })
-// })
+
