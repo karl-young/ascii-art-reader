@@ -25,7 +25,16 @@ describe('Testing welcome message', () => {
 describe('Display the different ASCII art', () => {
   test('List of display names is correct', async () => {
     //Arrange
-    const expected = ['kea', 'kiwi', 'manaia', 'nikau', 'pohutukawa']
+    const expected = [
+      'charizard',
+      'gryphon',
+      'kea',
+      'kiwi',
+      'manaia',
+      'nikau',
+      'pohutukawa',
+      'sonic',
+    ]
     //Act
     const result = await getFileNames()
     //Assert
@@ -33,6 +42,4 @@ describe('Display the different ASCII art', () => {
   })
 })
 
-// i need to test to see if i can accessTheFiles  function
-
-
+// I need to test to see if i can accessTheFiles  function
